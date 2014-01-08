@@ -1,0 +1,18 @@
+%h1 Musicians
+
+%table
+	%tr
+		%th First Name
+		%th Last Name
+		%th Instrument
+		%th Learned Songs
+
+	- @musicians.each do |musician|
+		%tr
+			%td= musician.first
+			%td= musician.last
+			%td= musician.instrument
+			%td
+				%ul
+					- musician.songs.each do |song|
+						%li= song.artist + " - " + song.title
