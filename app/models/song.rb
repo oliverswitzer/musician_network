@@ -1,6 +1,6 @@
 # song.rb
 
 class Song < ActiveRecord::Base
-  has_many :musicians_songs
-  has_many :musicians, :through => :musicians_songs
+  has_many :musician_songs
+  has_many :musicians, :through => :musician_songs
 end

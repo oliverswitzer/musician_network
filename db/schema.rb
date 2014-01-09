@@ -13,23 +13,21 @@
 
 ActiveRecord::Schema.define(:version => 20140108213137) do
 
-  create_table "musicians", :force => true do |t|
-    t.string  "first"
-    t.string  "last"
-    t.string  "instrument"
+  create_table "musician_songs", :force => true do |t|
+    t.integer "musician_id"
     t.integer "song_id"
   end
 
-  create_table "musicians_songs", :force => true do |t|
-    t.integer "musician_id"
-    t.integer "song_id"
+  create_table "musicians", :force => true do |t|
+    t.string "first"
+    t.string "last"
+    t.string "instrument"
   end
 
   create_table "songs", :force => true do |t|
-    t.string  "title"
-    t.string  "artist"
-    t.string  "genre"
-    t.integer "musician_id"
+    t.string "title"
+    t.string "artist"
+    t.string "genre"
   end
 
 end

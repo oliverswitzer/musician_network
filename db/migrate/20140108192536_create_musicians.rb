@@ -4,7 +4,6 @@ class CreateMusicians < ActiveRecord::Migration
       t.string :first
       t.string :last
       t.string :instrument
-      t.integer :song_id
     end
   end
 

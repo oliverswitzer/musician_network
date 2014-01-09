@@ -1,0 +1,10 @@
+
+%h1 Musician
+%h3= "Name: " + @musician.first + " " + @musician.last
+%h3= "Instrument: " + @musician.instrument
+%h3 Learned Songs:
+%ul
+	-@musician.songs.each do |song|
+		%li=song.artist + " - " + song.title + " (#{song.genre})"
+
+= link_to 'Index', musicians_path

@@ -1,7 +1,8 @@
 MusicianNetwork::Application.routes.draw do
 
-  get '/musicians' => 'musicians#index'
-  # The priority is based upon order of creation:
+  resources :musicians
+  resources :songs
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

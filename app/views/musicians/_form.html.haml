@@ -1,0 +1,17 @@
+=form_for(@musician) do |f|
+	.field 
+		= f.label :first
+		= f.text_field :first
+
+	.field 
+		= f.label :last
+		= f.text_field :last
+
+	.field
+		= f.label :instrument
+		= f.select :instrument, ["Guitar", "Saxophone", "Electric Bass", "Keyboard", "Triangle"]
+
+	.actions
+		= f.submit 
+
+

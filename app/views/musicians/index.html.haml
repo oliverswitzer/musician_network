@@ -2,10 +2,10 @@
 
 %table
 	%tr
-		%th First Name
-		%th Last Name
-		%th Instrument
-		%th Learned Songs
+		%th First Name  
+		%th Last Name  
+		%th Instrument  
+		%th Learned Songs  
 
 	- @musicians.each do |musician|
 		%tr
@@ -16,3 +16,8 @@
 				%ul
 					- musician.songs.each do |song|
 						%li= song.artist + " - " + song.title
+			%td= link_to 'Show', musician
+			%td= link_to 'Edit', edit_musician_path(musician)
+			%td= link_to 'Destroy', musician, confirm: "Are you sure?", method: :delete
+%br
+=link_to 'New Musician Profile', new_musician_path
