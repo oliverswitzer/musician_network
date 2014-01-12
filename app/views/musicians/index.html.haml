@@ -15,7 +15,7 @@
 			%td
 				%ul
 					- musician.songs.each do |song|
-						%li= song.artist + " - " + song.title
+						%li= link_to song.artist + ' - ' + song.title, song
 			%td= link_to 'Show', musician
 			%td= link_to 'Edit', edit_musician_path(musician)
 			%td= link_to 'Destroy', musician, confirm: "Are you sure?", method: :delete

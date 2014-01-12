@@ -1,0 +1,12 @@
+
+%h1 Song
+%h3= "Title: " + @song.title 
+%h3= "Artist: " + @song.artist
+%h3= "Genre: " + @song.genre
+%h3 Artists that know this song:
+%ul
+	-@song.musicians.each do |musician|
+		%li=musician.first + " " +  musician.last 
+		%p= link_to('Profile', musician)
+
+= link_to 'Songs Index', songs_path
